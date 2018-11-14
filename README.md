@@ -9,9 +9,25 @@ Analyse av hvem som bruker widget fra stillingssoket
 1. Hent inn liste over referrers med volum fra Google Analytics.
 2. Besøk kilden og sjekk om de bruker widget.
 
-# Tekniske detaljer:
+# Tekniske detaljer 
+
+Prosjektet bruker rendertron som startes med:
+
+     PORT=8080 npm run start
+
+Nb: puppeteer må installeres seperat. Config til typescript lint måtte endres til å bli mindre aggressiv.
+
+# Tekniske detaljer Gogle Analytics
+
+For å sette opp må det lages et prosjekt og lage json-credentials til Google Analytics API v4 som legges i en private/ katalog (ikke på github). Tilgangen trenger leserettigheter.
+
+https://console.cloud.google.com/apis/api/analyticsreporting.googleapis.com/overview?project=tovare-222514
+
+Account legges på viewer:
 
 tovarecrawler@tovare-222514.iam.gserviceaccount.com har view tilgang på 02 Stillingssok
+
+https://developers.google.com/analytics/devguides/reporting/core/dimsmets#cats=traffic_sources,page_tracking
 
 
 ## Google Analytics API request
