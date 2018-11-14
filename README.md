@@ -34,33 +34,33 @@ https://developers.google.com/analytics/devguides/reporting/core/dimsmets#cats=t
 
 POST https://analyticsreporting.googleapis.com/v4/reports:batchGet?key={YOUR_API_KEY}
 
-{
- "reportRequests": [
-  {
-   "dateRanges": [
     {
-     "startDate": "2018-08-01",
-     "endDate": "2018-08-02"
+    "reportRequests": [
+    {
+    "dateRanges": [
+        {
+        "startDate": "2018-08-01",
+        "endDate": "2018-08-02"
+        }
+    ],
+    "hideTotals": true,
+    "viewId": "95725034",
+    "dimensions": [
+        {
+        "name": "ga:fullReferrer"
+        }
+    ],
+    "metrics": [
+        {
+        "expression": "ga:entrances"
+        },
+        {
+        "expression": "ga:uniquePageviews"
+        }
+    ],
+    "pageSize": 10
     }
-   ],
-   "hideTotals": true,
-   "viewId": "95725034",
-   "dimensions": [
-    {
-     "name": "ga:fullReferrer"
-    }
-   ],
-   "metrics": [
-    {
-     "expression": "ga:entrances"
-    },
-    {
-     "expression": "ga:uniquePageviews"
-    }
-   ],
-   "pageSize": 10
-  }
- ]
+    ]
 
 
 
@@ -70,188 +70,188 @@ POST https://analyticsreporting.googleapis.com/v4/reports:batchGet?key={YOUR_API
  
 - Hide headers -
  
-cache-control:  private
-content-encoding:  gzip
-content-length:  662
-content-type:  application/json; charset=UTF-8
-date:  Wed, 14 Nov 2018 15:36:46 GMT
-server:  ESF
-vary:  Origin, X-Origin, Referer
- 
-{
- "reports": [
-  {
-   "columnHeader": {
-    "dimensions": [
-     "ga:fullReferrer"
-    ],
-    "metricHeader": {
-     "metricHeaderEntries": [
-      {
-       "name": "ga:entrances",
-       "type": "INTEGER"
-      },
-      {
-       "name": "ga:uniquePageviews",
-       "type": "INTEGER"
-      }
-     ]
+    cache-control:  private
+    content-encoding:  gzip
+    content-length:  662
+    content-type:  application/json; charset=UTF-8
+    date:  Wed, 14 Nov 2018 15:36:46 GMT
+    server:  ESF
+    vary:  Origin, X-Origin, Referer
+    
+    {
+    "reports": [
+    {
+    "columnHeader": {
+        "dimensions": [
+        "ga:fullReferrer"
+        ],
+        "metricHeader": {
+        "metricHeaderEntries": [
+        {
+        "name": "ga:entrances",
+        "type": "INTEGER"
+        },
+        {
+        "name": "ga:uniquePageviews",
+        "type": "INTEGER"
+        }
+        ]
+        }
+    },
+    "data": {
+        "rows": [
+        {
+        "dimensions": [
+        "(direct)"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "27768",
+            "90710"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-hordaland/nav-norheimsund/nav-kvam_101336032S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "2",
+            "5"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-moere-og-romsdal/nav-oersta/nav-oersta-volda_101336781S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "2",
+            "7"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-nordland/nav-bodoe/nav-bodoe_103143373S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "3"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-nordland/nav-bodoe/nav-hjelpemiddelsentral-nordland_100450579S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "7"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-oslo/nav-oslo-sentrum/nav-innkreving_100106888S20/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "9"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-sogn-og-fjordane/nav-sogndal/nav-sogndal_101337003S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "1"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/nav/nav-troms/nav-harstad/nav-harstad_100121466S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "2"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "1881.no/sosiale-tjenester-sosialkontor-og-sentre/sosiale-tjenester-sosialkontor-og-sentre-troendelag/sosiale-tjenester-sosialkontor-og-sentre-trondheim/nav-midtbyen_101408420S1/"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "3",
+            "16"
+            ]
+        }
+        ]
+        },
+        {
+        "dimensions": [
+        "69nord.no/ledige-stillinger"
+        ],
+        "metrics": [
+        {
+            "values": [
+            "1",
+            "1"
+            ]
+        }
+        ]
+        }
+        ],
+        "rowCount": 1789,
+        "minimums": [
+        {
+        "values": [
+        "0",
+        "0"
+        ]
+        }
+        ],
+        "maximums": [
+        {
+        "values": [
+        "27768",
+        "100583"
+        ]
+        }
+        ],
+        "isDataGolden": true
+    },
+    "nextPageToken": "10"
     }
-   },
-   "data": {
-    "rows": [
-     {
-      "dimensions": [
-       "(direct)"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "27768",
-         "90710"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-hordaland/nav-norheimsund/nav-kvam_101336032S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "2",
-         "5"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-moere-og-romsdal/nav-oersta/nav-oersta-volda_101336781S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "2",
-         "7"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-nordland/nav-bodoe/nav-bodoe_103143373S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "3"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-nordland/nav-bodoe/nav-hjelpemiddelsentral-nordland_100450579S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "7"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-oslo/nav-oslo-sentrum/nav-innkreving_100106888S20/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "9"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-sogn-og-fjordane/nav-sogndal/nav-sogndal_101337003S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "1"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/nav/nav-troms/nav-harstad/nav-harstad_100121466S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "2"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "1881.no/sosiale-tjenester-sosialkontor-og-sentre/sosiale-tjenester-sosialkontor-og-sentre-troendelag/sosiale-tjenester-sosialkontor-og-sentre-trondheim/nav-midtbyen_101408420S1/"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "3",
-         "16"
-        ]
-       }
-      ]
-     },
-     {
-      "dimensions": [
-       "69nord.no/ledige-stillinger"
-      ],
-      "metrics": [
-       {
-        "values": [
-         "1",
-         "1"
-        ]
-       }
-      ]
-     }
-    ],
-    "rowCount": 1789,
-    "minimums": [
-     {
-      "values": [
-       "0",
-       "0"
-      ]
-     }
-    ],
-    "maximums": [
-     {
-      "values": [
-       "27768",
-       "100583"
-      ]
-     }
-    ],
-    "isDataGolden": true
-   },
-   "nextPageToken": "10"
-  }
- ]
-}
+    ]
+    }
 
