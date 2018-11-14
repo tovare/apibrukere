@@ -66,10 +66,6 @@ POST https://analyticsreporting.googleapis.com/v4/reports:batchGet?key={YOUR_API
 
 ### RESPONSE
 
-200
- 
-- Hide headers -
- 
     cache-control:  private
     content-encoding:  gzip
     content-length:  662
