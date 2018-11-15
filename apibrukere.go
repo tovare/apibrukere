@@ -2,16 +2,17 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"flag"
 	"io/ioutil"
 	"log"
+	"net/http"
 	"net/url"
+	"os"
 	"strconv"
 	"strings"
 
+	"github.com/schollz/progressbar"
 	"golang.org/x/oauth2"
-
 	"golang.org/x/oauth2/google"
 	ga "google.golang.org/api/analyticsreporting/v4"
 )
@@ -118,14 +119,42 @@ func main() {
 		resultat[domain] = tmp
 	}
 
+	bar := progressbar.NewOptions(len(resultat),
+		progressbar.OptionSetWriter(os.Stderr))
+
 	// Crawl alle sider. Noen sider har mange forskjellige lenker.
 	// Dette løses ved å plukke en tilfeldig lenke.
 
-	//	for k, v := range resultat {
-	//
-	//	}
+	client := &http.Client{}
+	botget := func(u url.URL) string {
+		req, err := http.NewRequest("GET", u.String(), nil)
+		if err != nil {
+			log.Println(err)
+			return ""
+		}
+		req.Header.Set("User-Agent", "NAV tov.are.jacobsen@nav.no")
+		resp, err := client.Do(req)
+		if err != nil {
+			log.Println(err)
+			return ""
+		}
+		defer resp.Body.Close()
+		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			log.Println(err)
+			return ""
+		}
+		return string(body)
+	}
 
-	s, _ := json.MarshalIndent(resultat, "", "  ")
-	log.Println(string(s))
+	for k, v := range resultat {
+		log.Println(k)
+		botget(v.FullReferers[0].URL)
+		//log.Println(out)
+		bar.Add(1)
+	}
+
+	//s, _ := json.MarshalIndent(resultat, "", "  ")
+	//log.Println(string(s))
 
 }
