@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -34,9 +35,13 @@ func main() {
 	var (
 		credentials      string
 		antallResultater int
+		saveall          bool
+		rendertron       string
 	)
 	flag.StringVar(&credentials, "c", "private/tovare-a7a5db068b79.json", "Google API credentials")
 	flag.IntVar(&antallResultater, "n", 10, "Antall restulater å analysere, max 100 000")
+	flag.BoolVar(&saveall, "s", false, "Lagrer tekst og bilde fra alle sider")
+	flag.StringVar(&rendertron, "r", "http://127.0.0.1:3000", "Adressen til Google rendertron")
 	flag.Parse()
 
 	// Autentiser Analytics Reporting API.
@@ -126,8 +131,13 @@ func main() {
 	// Dette løses ved å plukke en tilfeldig lenke.
 
 	client := &http.Client{}
-	botget := func(u url.URL) string {
-		req, err := http.NewRequest("GET", u.String(), nil)
+	botget := func(u url.URL, screenshot bool, save bool) string {
+		cmd := "/render/"
+		if screenshot {
+			cmd = "/screenshot/"
+		}
+		req, err := http.NewRequest("GET", rendertron+cmd+u.String(), nil)
+		log.Println("Kontakter: " + req.URL.String())
 		if err != nil {
 			log.Println(err)
 			return ""
@@ -138,19 +148,52 @@ func main() {
 			log.Println(err)
 			return ""
 		}
-		defer resp.Body.Close()
-		body, err := ioutil.ReadAll(resp.Body)
-		if err != nil {
-			log.Println(err)
+		if resp.StatusCode != 200 {
+			log.Println("StatusCode " + strconv.Itoa(resp.StatusCode) + "for " + u.String())
 			return ""
 		}
-		return string(body)
+		defer resp.Body.Close()
+		var page string
+		if save {
+			if screenshot {
+				filename := strings.Replace(u.Hostname(), ".", "_", 0) + ".jpg"
+				log.Println("Lagrer " + filename)
+				file, err := os.Create(filename)
+				if err != nil {
+					log.Fatal(err)
+				}
+				defer file.Close()
+				_, err = io.Copy(file, resp.Body)
+				if err != nil {
+					log.Fatal(err)
+				}
+				return "image"
+			}
+			body, err := ioutil.ReadAll(resp.Body)
+			if err != nil {
+				log.Println(err)
+				return ""
+			}
+			page = string(body)
+			filename := strings.Replace(u.Hostname(), ".", "_", 0) + ".html"
+			log.Println("Lagrer " + filename)
+			file, err := os.Create(filename)
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer file.Close()
+			file.WriteString(page)
+
+		}
+		return page
 	}
 
-	for k, v := range resultat {
-		log.Println(k)
-		botget(v.FullReferers[0].URL)
-		//log.Println(out)
+	for _, v := range resultat {
+		resultatstreng := botget(v.FullReferers[0].URL, false, false)
+		if strings.Contains(resultatstreng, "stillinger/widget") {
+			log.Println("Gjorde et funn!")
+			botget(v.FullReferers[0].URL, true, true)
+		}
 		bar.Add(1)
 	}
 
