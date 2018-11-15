@@ -2,15 +2,32 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"flag"
 	"io/ioutil"
 	"log"
+	"net/url"
+	"strconv"
+	"strings"
 
 	"golang.org/x/oauth2"
 
 	"golang.org/x/oauth2/google"
 	ga "google.golang.org/api/analyticsreporting/v4"
 )
+
+// FullReferrer ... Hvert resultat
+type FullReferrer struct {
+	URL             url.URL
+	Entrances       int
+	UniquePageviews int
+}
+
+// Referrer ... Hvert domene
+type Referrer struct {
+	Domain       string
+	FullReferers []FullReferrer
+}
 
 func main() {
 	var (
@@ -21,7 +38,7 @@ func main() {
 	flag.IntVar(&antallResultater, "n", 10, "Antall restulater å analysere, max 100 000")
 	flag.Parse()
 
-	// Autentiser Analytics Reporting API
+	// Autentiser Analytics Reporting API.
 	var service *ga.Service
 
 	{
@@ -70,7 +87,45 @@ func main() {
 		}
 	}
 
-	log.Println("Completed")
-	log.Println(myreport.Reports[0].Data.Rows[1])
+	// Lag en liste over alle henvisninger i resultat
+	resultat := make(map[string]Referrer)
+	const (
+		ENTRANCES = iota
+		UNIQUEPAGEVIEWS
+	)
+
+	for _, row := range myreport.Reports[0].Data.Rows {
+		// Eksepler: 69nord.no/ledige-stillinger , (direct)
+		partialurl := row.Dimensions[0]
+		domain := strings.Split(partialurl, "/")[0]
+		if domain == "(direct)" {
+			continue
+		}
+		tmp, exists := resultat[domain]
+		if !exists {
+			tmp := Referrer{}
+			tmp.FullReferers = make([]FullReferrer, 1)
+		}
+		entry := FullReferrer{}
+		u, err := url.ParseRequestURI("http://" + partialurl)
+		if err != nil {
+			log.Fatal(err)
+		}
+		entry.URL = *u
+		entry.Entrances, _ = strconv.Atoi(row.Metrics[0].Values[ENTRANCES])
+		entry.UniquePageviews, _ = strconv.Atoi(row.Metrics[0].Values[UNIQUEPAGEVIEWS])
+		tmp.FullReferers = append(tmp.FullReferers, entry)
+		resultat[domain] = tmp
+	}
+
+	// Crawl alle sider. Noen sider har mange forskjellige lenker.
+	// Dette løses ved å plukke en tilfeldig lenke.
+
+	//	for k, v := range resultat {
+	//
+	//	}
+
+	s, _ := json.MarshalIndent(resultat, "", "  ")
+	log.Println(string(s))
 
 }
