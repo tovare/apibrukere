@@ -189,7 +189,7 @@ func main() {
 	}
 
 	for _, v := range resultat {
-		resultatstreng := botget(v.FullReferers[0].URL, false, false)
+		resultatstreng := botget(v.FullReferers[0].URL, true, true)
 		if strings.Contains(resultatstreng, "stillinger/widget") {
 			log.Println("Gjorde et funn!")
 			botget(v.FullReferers[0].URL, true, true)

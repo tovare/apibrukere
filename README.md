@@ -18,6 +18,12 @@ Prosjektet bruker rendertron som startes med:
 
 Nb: puppeteer må installeres seperat. Config til typescript lint måtte endres til å bli mindre aggressiv.
 
+## Bildegalleri
+
+ montage  -thumbnail 300x300  -bordercolor grey  -background grey40 -pointsize 9 -density 144x144 +polaroid -resize 50%  -background white -geometry +1+1 -tile 10x10 -set caption %t -title "Sider som lenker til stillinger" *.jpg polaroid_t.jpg
+
+
+
 # Tekniske detaljer Gogle Analytics
 
 For å sette opp må det lages et prosjekt og lage json-credentials til Google Analytics API v4 som legges i en private/ katalog (ikke på github). Tilgangen trenger leserettigheter.
