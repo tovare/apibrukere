@@ -14,50 +14,60 @@ import (
 
 func main() {
 	var (
-		credentials string
+		credentials      string
+		antallResultater int
 	)
 	flag.StringVar(&credentials, "c", "private/tovare-a7a5db068b79.json", "Google API credentials")
+	flag.IntVar(&antallResultater, "n", 10, "Antall restulater å analysere, max 100 000")
 	flag.Parse()
 
 	// Autentiser Analytics Reporting API
-	ctx := context.Background()
-	data, err := ioutil.ReadFile(credentials)
-	if err != nil {
-		log.Fatal(err)
-	}
-	creds, err := google.CredentialsFromJSON(ctx, data, ga.AnalyticsReadonlyScope)
-	if err != nil {
-		log.Fatal(err)
-	}
-	service, err := ga.New(oauth2.NewClient(ctx, creds.TokenSource))
-	if err != nil {
-		log.Fatal(err)
+	var service *ga.Service
+
+	{
+		ctx := context.Background()
+		data, err := ioutil.ReadFile(credentials)
+		if err != nil {
+			log.Fatal(err)
+		}
+		creds, err := google.CredentialsFromJSON(ctx, data, ga.AnalyticsReadonlyScope)
+		if err != nil {
+			log.Fatal(err)
+		}
+		service, err = ga.New(oauth2.NewClient(ctx, creds.TokenSource))
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
-	// Kjør rapport
-	req := &ga.GetReportsRequest{
-		ReportRequests: []*ga.ReportRequest{
-			{
-				ViewId: "95725034",
+	// Definer og kjør rapport
+	var myreport *ga.GetReportsResponse
 
-				DateRanges: []*ga.DateRange{
-					{StartDate: "2018-08-01", EndDate: "2018-08-02"},
+	{
+		req := &ga.GetReportsRequest{
+			ReportRequests: []*ga.ReportRequest{
+				{
+					ViewId: "95725034",
+
+					DateRanges: []*ga.DateRange{
+						{StartDate: "2018-08-01", EndDate: "2018-08-02"},
+					},
+					Metrics: []*ga.Metric{
+						{Expression: "ga:entrances"},
+						{Expression: "ga:uniquePageviews"},
+					},
+					Dimensions: []*ga.Dimension{
+						{Name: "ga:fullReferrer"},
+					},
+					PageSize: int64(antallResultater),
 				},
-				Metrics: []*ga.Metric{
-					{Expression: "ga:entrances"},
-					{Expression: "ga:uniquePageviews"},
-				},
-				Dimensions: []*ga.Dimension{
-					{Name: "ga:fullReferrer"},
-				},
-				PageSize: 10,
 			},
-		},
-	}
-
-	myreport, err := service.Reports.BatchGet(req).Do()
-	if err != nil {
-		log.Fatal(err)
+		}
+		var err error
+		myreport, err = service.Reports.BatchGet(req).Do()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	log.Println("Completed")
