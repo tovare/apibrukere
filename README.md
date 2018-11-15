@@ -8,8 +8,9 @@ Analyse av hvem som bruker widget fra stillingssoket
 
 1. Hent inn liste over referrers med volum fra Google Analytics.
 2. Besøk kilden og sjekk om de bruker widget.
+3. Lagre skjermbildet
 
-# Tekniske detaljer 
+# Tekniske detaljer rendering
 
 Prosjektet bruker rendertron som startes med:
 
