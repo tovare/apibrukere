@@ -7,8 +7,9 @@ Analyse av hvem som bruker widget fra stillingssoket
 ## Planen
 
 1. Hent inn liste over referrers med volum fra Google Analytics.
-2. Besøk kilden og sjekk om de bruker widget.
+2. Besøk kilden og sjekk om de bruker widget osv.
 3. Lagre skjermbildet
+4. Serialiser resultatet til markdown. Bilde + tekst.
 
 # Tekniske detaljer rendering
 
@@ -18,9 +19,16 @@ Prosjektet bruker rendertron som startes med:
 
 Nb: puppeteer må installeres seperat. Config til typescript lint måtte endres til å bli mindre aggressiv.
 
+## Rapportering
+
+1. Antall nettsteder som er undersøkt.
+2. Antall nettsteder som feilet og hvorfor.
+3. Nettsteder som bør undersøkes og hvorfor.
+
+
 ## Bildegalleri
 
- montage  -thumbnail 300x300  -bordercolor grey  -background grey40 -pointsize 9 -density 144x144 +polaroid -resize 50%  -background white -geometry +1+1 -tile 10x10 -set caption %t -title "Sider som lenker til stillinger" *.jpg polaroid_t.jpg
+    montage  -thumbnail 300x300  -bordercolor grey  -background grey40 -pointsize 9 -density 144x144 +polaroid -resize 50%  -background white -geometry +1+1 -tile 10x10 -set caption %t -title "Sider som lenker til stillinger" *.jpg polaroid_t.jpg
 
 
 

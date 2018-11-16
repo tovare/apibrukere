@@ -153,6 +153,7 @@ func main() {
 			return ""
 		}
 		defer resp.Body.Close()
+
 		var page string
 		if save {
 			if screenshot {
