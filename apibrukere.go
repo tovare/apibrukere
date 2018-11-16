@@ -124,8 +124,7 @@ func main() {
 		resultat[domain] = tmp
 	}
 
-	bar := progressbar.NewOptions(len(resultat),
-		progressbar.OptionSetWriter(os.Stderr))
+	bar := progressbar.New(len(resultat))
 
 	// Crawl alle sider. Noen sider har mange forskjellige lenker.
 	// Dette løses ved å plukke en tilfeldig lenke.
