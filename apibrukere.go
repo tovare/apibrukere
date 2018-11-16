@@ -205,8 +205,12 @@ func main() {
 			botget(v.FullReferers[0].URL, true, true)
 		}
 	}
-
+	report(resultat)
 	//s, _ := json.MarshalIndent(resultat, "", "  ")
 	//log.Println(string(s))
+
+}
+
+func report(resultat map[string]Referrer) {
 
 }
