@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"flag"
 	"io"
 	"io/ioutil"
@@ -28,6 +29,8 @@ type FullReferrer struct {
 // Referrer ... Hvert domene
 type Referrer struct {
 	Domain       string
+	SumEntrances int
+	Failed       error
 	FullReferers []FullReferrer
 }
 
@@ -73,7 +76,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-08-01", EndDate: "2018-08-02"},
+						{StartDate: "2018-08-02", EndDate: "2018-08-03"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -130,7 +133,7 @@ func main() {
 	// Dette løses ved å plukke en tilfeldig lenke.
 
 	client := &http.Client{}
-	botget := func(u url.URL, screenshot bool, save bool) string {
+	botget := func(u url.URL, screenshot bool, save bool) (string, error) {
 		cmd := "/render/"
 		if screenshot {
 			cmd = "/screenshot/"
@@ -139,17 +142,17 @@ func main() {
 		log.Println("Kontakter: " + req.URL.String())
 		if err != nil {
 			log.Println(err)
-			return ""
+			return "", err
 		}
 		req.Header.Set("User-Agent", "NAV tov.are.jacobsen@nav.no")
 		resp, err := client.Do(req)
 		if err != nil {
 			log.Println(err)
-			return ""
+			return "", err
 		}
 		if resp.StatusCode != 200 {
 			log.Println("StatusCode " + strconv.Itoa(resp.StatusCode) + "for " + u.String())
-			return ""
+			return "", errors.New(resp.Status)
 		}
 		defer resp.Body.Close()
 
@@ -167,12 +170,12 @@ func main() {
 				if err != nil {
 					log.Fatal(err)
 				}
-				return "image"
+				return "", err
 			}
 			body, err := ioutil.ReadAll(resp.Body)
 			if err != nil {
 				log.Println(err)
-				return ""
+				return "", err
 			}
 			page = string(body)
 			filename := strings.Replace(u.Hostname(), ".", "_", 0) + ".html"
@@ -185,16 +188,22 @@ func main() {
 			file.WriteString(page)
 
 		}
-		return page
+		return page, nil
 	}
 
-	for _, v := range resultat {
-		resultatstreng := botget(v.FullReferers[0].URL, true, true)
+	for k, v := range resultat {
+		defer bar.Add(1)
+		resultatstreng, err := botget(v.FullReferers[0].URL, true, true)
+		if err != nil {
+			t := resultat[k]
+			t.Failed = err
+			resultat[k] = t
+			continue
+		}
 		if strings.Contains(resultatstreng, "stillinger/widget") {
 			log.Println("Gjorde et funn!")
 			botget(v.FullReferers[0].URL, true, true)
 		}
-		bar.Add(1)
 	}
 
 	//s, _ := json.MarshalIndent(resultat, "", "  ")
