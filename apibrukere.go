@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"flag"
 	"io"
@@ -32,6 +33,8 @@ type Referrer struct {
 	Domain       string
 	SumEntrances int
 	Failed       error
+	Widget       bool
+	NStilinger   bool
 	FullReferers []FullReferrer
 }
 
@@ -77,7 +80,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-08-02", EndDate: "2018-08-03"},
+						{StartDate: "2018-10-01", EndDate: "2018-10-30"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -121,6 +124,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
+		tmp.Domain = u.Host
 		entry.URL = *u
 		entry.Entrances, _ = strconv.Atoi(row.Metrics[0].Values[ENTRANCES])
 		entry.UniquePageviews, _ = strconv.Atoi(row.Metrics[0].Values[UNIQUEPAGEVIEWS])
@@ -160,7 +164,7 @@ func main() {
 		var page string
 		if save {
 			if screenshot {
-				filename := strings.Replace(u.Hostname(), ".", "_", 0) + ".jpg"
+				filename := "out/" + strings.Replace(u.Hostname(), ".", "_", 0) + ".jpg"
 				log.Println("Lagrer " + filename)
 				file, err := os.Create(filename)
 				if err != nil {
@@ -179,7 +183,7 @@ func main() {
 				return "", err
 			}
 			page = string(body)
-			filename := strings.Replace(u.Hostname(), ".", "_", 0) + ".html"
+			filename := "out/" + strings.Replace(u.Hostname(), ".", "_", 0) + ".html"
 			log.Println("Lagrer " + filename)
 			file, err := os.Create(filename)
 			if err != nil {
@@ -195,14 +199,20 @@ func main() {
 	process := func(wg *sync.WaitGroup, c <-chan Referrer, out chan<- Referrer) {
 		for v := range c {
 			bar.Add(1)
-			resultatstreng, err := botget(v.FullReferers[0].URL, true, true)
+			resultatstreng, err := botget(v.FullReferers[0].URL, false, true)
 			if err != nil {
 				v.Failed = err
 				out <- v
 				continue
 			}
 			if strings.Contains(resultatstreng, "stillinger/widget") {
+				v.Widget = true
 				log.Println("Gjorde et funn!")
+				botget(v.FullReferers[0].URL, true, true)
+			}
+			if strings.Count(resultatstreng, "stillinger") > 1 {
+				v.NStilinger = true
+				log.Println("Stillinger nevnt mer enn en gang.")
 				botget(v.FullReferers[0].URL, true, true)
 			}
 			out <- v
@@ -233,8 +243,8 @@ func main() {
 	close(br)
 
 	report(resultat)
-	//s, _ := json.MarshalIndent(resultat, "", "  ")
-	//log.Println(string(s))
+	s, _ := json.MarshalIndent(resultat, "", "  ")
+	log.Println(string(s))
 
 }
 
