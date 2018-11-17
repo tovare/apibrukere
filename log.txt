@@ -1,0 +1,295 @@
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://aftenposten.no/karriere/Vi-testet-karrireveiledere--og-endte-opp-som-bade-slankevert_-bilselger-og-skuespiller-10852b.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://amot.kommune.no/ledigstilling/Sider/side.aspx
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dinstartside.no/googlesok.php
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://en-tilhammerfest.weebly.com/jobs.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bing
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://aftenposten.no/karriere/Vi-testet-karrireveiledere--og-endte-opp-som-bade-slankevert_-bilselger-og-skuespiller-10852b.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://adsby.bidtheatre.com/invocation
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://deref-gmx.net/mail/client/BX-tRBMJdVg/dereferrer/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dinstartside.no/googlesok.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://denstad.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://caboto.info/2015/06/il-petrolio-norvegese-cerca-manodopera-straniera/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://amot.kommune.no/ledigstilling/Sider/side.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://detsombetyrnoe.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bamble.kommune.no/helse-og-omsorg/andre-tjenester/legevakt-legetjeneste-fastlege/fastleger/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://en-tilhammerfest.weebly.com/jobs.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bing: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://adsby.bidtheatre.com/invocation: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://deref-gmx.net/mail/client/BX-tRBMJdVg/dereferrer/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://denstad.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://caboto.info/2015/06/il-petrolio-norvegese-cerca-manodopera-straniera/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bryne.no/jobb/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bamble.kommune.no/helse-og-omsorg/andre-tjenester/legevakt-legetjeneste-fastlege/fastleger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dinside.no/jobb/slik-sier-du-opp-jobben/62357795
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dzive-norvegija.com/majas-lapas-un-portali-darba-meklesanai/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bryne.no/jobb/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://1881.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://enga.norlandiabarnehagene.no/Innhold/Side/25468
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dinside.no/jobb/slik-sier-du-opp-jobben/62357795: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dzive-norvegija.com/majas-lapas-un-portali-darba-meklesanai/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://1881.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://drammen.kommune.no/sosiale-tjenester-og-bolig/sosiale-tjenester-og-bolig/sosiale-tjenester-i-nav-drammen/okonomisk-sosialhjelp/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://diabetes.no/leksikon/h/hjelpestonad/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://enga.norlandiabarnehagene.no/Innhold/Side/25468: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eidemotor.no/nyheter/714/31-01-2018/ledige-stillinger/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://drammen.kommune.no/sosiale-tjenester-og-bolig/sosiale-tjenester-og-bolig/sosiale-tjenester-i-nav-drammen/okonomisk-sosialhjelp/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://diabetes.no/leksikon/h/hjelpestonad/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://batsfjord.custompublish.com/ledige-stillinger.401578.no.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://adressa.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://at.bi.no/NO/Pages/Car_Finn%20jobben%20for%20deg.aspx
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://coop.no/om-coop/ledige-stillinger/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://batsfjord.custompublish.com/ledige-stillinger.401578.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://crm.eliteservice.no/dw/doku.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://detsombetyrnoe.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://delta.cappelendamm.no/vgsamf/seksjon.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://adressa.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://arbejdeinorge.dk/job-i-oslo
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eigersund.kommune.no/nav.153149.no.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://delta.cappelendamm.no/vgsamf/seksjon.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://e-h.kommune.no/ledige-stillinger-registrert-paa-nav.5956738.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bodo.kommune.no/jobb-bolig-og-transport/category3656.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://crm.eliteservice.no/dw/doku.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://coop.no/om-coop/ledige-stillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://emigrant.guru/kak/sposoby/work/poisk-i-ustroystvo-na-rabotu-v-norvegii-kak-nayti.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bibforb.no/lonn-og-arbeid/ledige-stillinger-2/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://at.bi.no/NO/Pages/Car_Finn%20jobben%20for%20deg.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bodo.kommune.no/jobb-bolig-og-transport/category3656.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://blindeforbundet.no/hjelpemidler-og-produkter/forerhund
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dysleksinorge.no/faq/rett-til-hjelpemidler/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://e-h.kommune.no/ledige-stillinger-registrert-paa-nav.5956738.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bibforb.no/lonn-og-arbeid/ledige-stillinger-2/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://emigrant.guru/kak/sposoby/work/poisk-i-ustroystvo-na-rabotu-v-norvegii-kak-nayti.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://beiarn.kommune.no/ledig-stilling.441816.no.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dysleksinorge.no/faq/rett-til-hjelpemidler/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://avg
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://barnasspraksenter.no/hjelpemidlertalk-tools/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://arbejdeinorge.dk/job-i-oslo: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://barneombudet.no/sporsmalsarkiv/skjer-nar-18/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eidemotor.no/nyheter/714/31-01-2018/ledige-stillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://ecosia.org/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://barneombudet.no/sporsmalsarkiv/skjer-nar-18/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eidsvoll.kommune.no/publisert-innhold/helse-og-oppvekst/sosiale-tjenester/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eigersund.kommune.no/nav.153149.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://abilia.com/nb/behov-hjelpemiddel/%C3%A5-bestille-et-hjelpemiddel-fra-abilia
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://ecosia.org/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eidsvoll.kommune.no/publisert-innhold/helse-og-oppvekst/sosiale-tjenester/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://beiarn.kommune.no/ledig-stilling.441816.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://awcoslo.org/working-in-norway
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://aremark.kommune.no/helse-omsorg-og-nav.370276.no.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://app.intercom.io/a/apps/cob5ycm7/inbox/inbox/1195169/conversations/17684847847
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://avg: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://abilia.com/nb/behov-hjelpemiddel/%C3%A5-bestille-et-hjelpemiddel-fra-abilia: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://ask
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://awcoslo.org/working-in-norway: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://barnerettsbloggen.no/tag/kalkulator-foreldrepenger/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://aremark.kommune.no/helse-omsorg-og-nav.370276.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://cambiarevita.eu/norvegia/vivere-e-lavorare-in-norvegia
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://as.kommune.no/cppage.350275.no.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://barnerettsbloggen.no/tag/kalkulator-foreldrepenger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://ask: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://cambiarevita.eu/norvegia/vivere-e-lavorare-in-norvegia: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://butikksjef.com/wordpress/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://as.kommune.no/cppage.350275.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://domstol.no/no/Enkelt-domstol/moss-tingrett/om-moss-tingrett/Ledige-stillinger/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://digipost.no/app/post
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://butikksjef.com/wordpress/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://amfi.no/kjopesentre/amfi-forde/ledige-stillingar/nille-sokjer-ekstrahjelp/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://beta.gildeskalportalen.no/jobber-arbeidskraft-service/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://blindeforbundet.no/hjelpemidler-og-produkter/forerhund: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://alstahaug.kommune.no/aktuelle-stillinger-i-regionen.458392.no.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://barnasspraksenter.no/hjelpemidlertalk-tools/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://alstahaug.kommune.no/aktuelle-stillinger-i-regionen.458392.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://beta.gildeskalportalen.no/jobber-arbeidskraft-service/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://amfi.no/kjopesentre/amfi-forde/ledige-stillingar/nille-sokjer-ekstrahjelp/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://digipost.no/app/post: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://domstol.no/no/Enkelt-domstol/moss-tingrett/om-moss-tingrett/Ledige-stillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bronnoy.kommune.no/fokusnyhet/er-du-ny-i-bronnoy-eller-planlegger-du-a-flytte-hit.560.aspx
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://briga.no/ledigestillinger.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://app.intercom.io/a/apps/cob5ycm7/inbox/inbox/1195169/conversations/17684847847: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bronnoy.kommune.no/fokusnyhet/er-du-ny-i-bronnoy-eller-planlegger-du-a-flytte-hit.560.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://briga.no/ledigestillinger.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bufdir.no/Familie/mekling/Foreldreansvar_og_bosted/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://adhdnorge.no/aktuelt/hvilke-rettigheter-har-du-krav-pa/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://deterdinpensjon.no/2016/03/14/hvordan-beregnes-min-alderspensjon/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://andoy.kommune.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://banners.host.bannerflow.com/5a8194ca8a10ad1f20222fbe.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dyroy.kommune.no/ledige-stillinger.2566.no.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bjugn.kommune.no/jobb-hos-oss/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://deterdinpensjon.no/2016/03/14/hvordan-beregnes-min-alderspensjon/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://adhdnorge.no/aktuelt/hvilke-rettigheter-har-du-krav-pa/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://avinor.no/en/corporate/airport/oslo/careers/vacant-positions/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://andoy.kommune.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://altinn.no/nn/skjemaoversikt/arbeids--og-velferdsetaten-nav/sykmelding/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://brasileiraspelomundo.com/noruega-ser-mulher-nos-dias-de-hoje-271830325
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dyroy.kommune.no/ledige-stillinger.2566.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://banners.host.bannerflow.com/5a8194ca8a10ad1f20222fbe.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bufdir.no/Familie/mekling/Foreldreansvar_og_bosted/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://amino.dk/forums/t/278473.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://avinor.no/en/corporate/airport/oslo/careers/vacant-positions/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bjugn.kommune.no/jobb-hos-oss/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://away.vk.com/away.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://altinn.no/nn/skjemaoversikt/arbeids--og-velferdsetaten-nav/sykmelding/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://cc.epinionglobal.com/mrIWeb/mrIWeb.srf
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://amino.dk/forums/t/278473.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://coop.inkognito.no/stillinger/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://akademiet.instructure.com/courses/4979/assignments/29647
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://away.vk.com/away.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://brasileiraspelomundo.com/noruega-ser-mulher-nos-dias-de-hoje-271830325: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://career-contact.net/jobs-in-norwegen-stellensuche.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://cc.epinionglobal.com/mrIWeb/mrIWeb.srf: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://akademiet.instructure.com/courses/4979/assignments/29647: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://emigrant-guru.cdn.ampproject.org/v/s/emigrant.guru/kak/sposoby/work/poisk-i-ustroystvo-na-rabotu-v-norvegii-kak-nayti.html/amp
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://couchsurfing.com/advice/questions/58474
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://advokatenhjelperdeg.no/jus-artikler/taper-trygderettigheter-ved-flytting/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://coop.inkognito.no/stillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://embla.itportal.no/IClient/Lite/Message.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://emigrant-guru.cdn.ampproject.org/v/s/emigrant.guru/kak/sposoby/work/poisk-i-ustroystvo-na-rabotu-v-norvegii-kak-nayti.html/amp: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://autismeforeningen.no/akershus/manedens-rettighet-omsorgspenger/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://en.uit.no/education/studentportal/new/prearrival/art
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://couchsurfing.com/advice/questions/58474: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://amento.no/ailaering/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bindal.kommune.no/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://advokatenhjelperdeg.no/jus-artikler/taper-trygderettigheter-ved-flytting/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://an.no/vis/stillingledig/3439321
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://autismeforeningen.no/akershus/manedens-rettighet-omsorgspenger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://app.vainu.io/showroom/leads/filter/new/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://embla.itportal.no/IClient/Lite/Message.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://career-contact.net/jobs-in-norwegen-stellensuche.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://Apsis
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://deltagruppen.sharepoint.com/default.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://en.uit.no/education/studentportal/new/prearrival/art: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://an.no/vis/stillingledig/3439321: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://absolutviajes.com/si-piensas-trabajar-en-noruega/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://ellada.no/%CE%B8%CE%AD%CE%BB%CF%89-%CE%BD%CE%B1-%CE%BC%CE%B5%CF%84%CE%B1%CE%BA%CE%BF%CE%BC%CE%AF%CF%83%CF%89-%CE%BD%CE%BF%CF%81%CE%B2%CE%B7%CE%B3%CE%AF%CE%B1-%CE%BC%CE%B9%CE%BA%CF%81%CF%8C-%CE%BA%CE%B1%CE%B9
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://Apsis: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://deltagruppen.sharepoint.com/default.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bardum.no/aktivitet/hjelpemiddelmesse-bjerkevik-torsdag-24-mai-2018/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://adobeindd.com/view/publications/2755c72b-53c0-4bcf-8ab5-48aac31cea6b/4abk/publication-17.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://business.facebook.com/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://ellada.no/%CE%B8%CE%AD%CE%BB%CF%89-%CE%BD%CE%B1-%CE%BC%CE%B5%CF%84%CE%B1%CE%BA%CE%BF%CE%BC%CE%AF%CF%83%CF%89-%CE%BD%CE%BF%CF%81%CE%B2%CE%B7%CE%B3%CE%AF%CE%B1-%CE%BC%CE%B9%CE%BA%CF%81%CF%8C-%CE%BA%CE%B1%CE%B9: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bardum.no/aktivitet/hjelpemiddelmesse-bjerkevik-torsdag-24-mai-2018/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dom.no/phpBB3/viewtopic.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://adobeindd.com/view/publications/2755c72b-53c0-4bcf-8ab5-48aac31cea6b/4abk/publication-17.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://absolutviajes.com/si-piensas-trabajar-en-noruega/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://business.facebook.com/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://asker.kommune.no/naringsliv/lokale-jobber/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://averoy.kommune.no/tjenester/helse-og-omsorg/rusomsorg/sok-om-plass-pa-rusinstitusjon/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bindal.kommune.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dom.no/phpBB3/viewtopic.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://blog.contus.no/index.php/lt/2017/05/21/kas-gali-gauti-norvegiska-senatves-pensija/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://amento.no/ailaering/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bygland.kommune.no/ledige-stillingar.295209.nn.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://arkivforbundet.no/om/ledige-arkivstillinger/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dsa.dk/Karriereunivers/Job-i-udlandet/Job-i-Norge.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://averoy.kommune.no/tjenester/helse-og-omsorg/rusomsorg/sok-om-plass-pa-rusinstitusjon/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://asker.kommune.no/naringsliv/lokale-jobber/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dt.no/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bygland.kommune.no/ledige-stillingar.295209.nn.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://blog.contus.no/index.php/lt/2017/05/21/kas-gali-gauti-norvegiska-senatves-pensija/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eika.no/forsikring/helseerklering
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dinerstatning.no/nyheter/her-er-dine-rettigheter-i-folketrygden-ved-d%C3%B8dsfall-i-familien
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dsa.dk/Karriereunivers/Job-i-udlandet/Job-i-Norge.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://app.vainu.io/showroom/leads/filter/new/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://arkivforbundet.no/om/ledige-arkivstillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dt.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dinerstatning.no/nyheter/her-er-dine-rettigheter-i-folketrygden-ved-d%C3%B8dsfall-i-familien: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eika.no/forsikring/helseerklering: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://arjang.se/Foretagare/Naringsliv--Arbete/Lediga-jobb/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://balsfjord.custompublish.com/jobbmesse-for-arbeidssoekere-og-arbeidsgivere.6091711-49621.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://deref-web-02.de/mail/client/ATDalySSJY8/dereferrer/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://e24.no/privat/forbrukerrettigheter/trikset-som-gir-maks-penger-og-permisjon/21114033
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://engerdal.kommune.no/flytt_hit/jobbe/Sider/side.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://arjang.se/Foretagare/Naringsliv--Arbete/Lediga-jobb/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://abcnyheter.no/penger/2015/06/08/225691/kan-du-reise-til-utlandet-nar-du-mottar-stonad-fra-nav
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://app.asana.com/0/194470666831229/710719306486591
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://batsfjord.kommune.no/ledige-stillinger.401578.no.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://djoef.dk/r-aa-dgivning/jobsoegning/jobs-oe-gning-i-udlandet/jobs-oe-gning-i-norge.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://engerdal.kommune.no/flytt_hit/jobbe/Sider/side.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://e24.no/privat/forbrukerrettigheter/trikset-som-gir-maks-penger-og-permisjon/21114033: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://69nord.no/ledige-stillinger
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://deref-web-02.de/mail/client/ATDalySSJY8/dereferrer/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bergen.kommune.no/tjenestetilbud/omsorg-trygd-og-sosiale-tjenester/okonomiske-ytelser/kontantstotte/redusert-foreldrebetaling-i-barnehage-og-sfo
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://app.asana.com/0/194470666831229/710719306486591: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://abcnyheter.no/penger/2015/06/08/225691/kan-du-reise-til-utlandet-nar-du-mottar-stonad-fra-nav: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://batsfjord.kommune.no/ledige-stillinger.401578.no.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://djoef.dk/r-aa-dgivning/jobsoegning/jobs-oe-gning-i-udlandet/jobs-oe-gning-i-norge.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://careerjet.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://auslandsjob.de/job-angebote-norwegen.php
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://easyexpat.com/es/guides/noruega/oslo/encontrar-trabajo/anuncios-gabinetes.htm
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://balsfjord.custompublish.com/jobbmesse-for-arbeidssoekere-og-arbeidsgivere.6091711-49621.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://altformamma.no/artikler/265/article/item/null/11-punkter-om-fedrekvoten
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bergen.kommune.no/tjenestetilbud/omsorg-trygd-og-sosiale-tjenester/okonomiske-ytelser/kontantstotte/redusert-foreldrebetaling-i-barnehage-og-sfo: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://careerjet.no/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://autismesiden.no/Page.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://auslandsjob.de/job-angebote-norwegen.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://69nord.no/ledige-stillinger: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://cp.no/om-oss/voksen/arbeid/tilrettelegging-pa-arbeidsplassen/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://croexpress.eu/vijest_mobile.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://easyexpat.com/es/guides/noruega/oslo/encontrar-trabajo/anuncios-gabinetes.htm: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://drammenmontessoribarnehage.no/drammen-montessoribarnehage/ledige-stillinger/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://diskusjon.no/index.php
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://cp.no/om-oss/voksen/arbeid/tilrettelegging-pa-arbeidsplassen/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://croexpress.eu/vijest_mobile.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://blog.mojnorweski.pl/praca-w-norwegii-od-czego-zaczac/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://email.seznam.cz/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://altformamma.no/artikler/265/article/item/null/11-punkter-om-fedrekvoten: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://duckduckgo.com/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://arbeidstilsynet.no/arbeidsforhold/lonn/manglende-betaling-av-lonn-og-feriepenger/nar-arbeidsgiver-ikke-kan-betale/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://drammenmontessoribarnehage.no/drammen-montessoribarnehage/ledige-stillinger/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eid.difi.no/en/forgotten-password
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://email.seznam.cz/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://diskusjon.no/index.php: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://ec.europa.eu/social/main.jsp
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://aksjelive.e24.no/article/wEjK7A
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eid.difi.no/en/forgotten-password: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://autismesiden.no/Page.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://besoklegen.no/NetsAuthentication/NoMedicalRecord.aspx
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bodin.vgs.no/om-skolen/om-oss/jobb-hos-oss/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://ec.europa.eu/social/main.jsp: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://24ru.com/index/labor-exchange
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://aksjelive.e24.no/article/wEjK7A: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://blog.mojnorweski.pl/praca-w-norwegii-od-czego-zaczac/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://babyverden.no/blogg/okonomibloggen/jobbe-redusert-nar-barnet-begynner-barnehagen/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://e-skjema.no/Andoy/artikkel.aspx
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bodin.vgs.no/om-skolen/om-oss/jobb-hos-oss/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://24ru.com/index/labor-exchange: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://besoklegen.no/NetsAuthentication/NoMedicalRecord.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://austagderfk.no/kompetanse-aust-agder/jobbtips/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://barona.no/blogger/hvordan-skrive-apen-soknad/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://e-skjema.no/Andoy/artikkel.aspx: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://babyverden.no/blogg/okonomibloggen/jobbe-redusert-nar-barnet-begynner-barnehagen/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://arbeidstilsynet.no/arbeidsforhold/lonn/manglende-betaling-av-lonn-og-feriepenger/nar-arbeidsgiver-ikke-kan-betale/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://duckduckgo.com/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://classroom.google.com/c/MTU3NjY3NDIxNTBa
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://barona.no/blogger/hvordan-skrive-apen-soknad/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://austagderfk.no/kompetanse-aust-agder/jobbtips/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://email.t-online.de/ipad/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://emigrateme.com/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://empregopelomundo.com/noticias/a-noruega-tem-mais-de-9-mil-ofertas-de-emprego/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://email.t-online.de/ipad/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://classroom.google.com/c/MTU3NjY3NDIxNTBa: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bykle.kommune.no/ledige-stillingar-gammel.295004.nn.html
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://emigrateme.com/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://danskebank.no/privat/artikler/2018/hvor-faar-du-pensjonen-din-fra
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://eidfjordkyrkje.no/Artikler/Nyheter/ArticleId/57899/Ledig-stilling-som-sokneprest-i-Eidfjord-og-Kinsarvik
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://empregopelomundo.com/noticias/a-noruega-tem-mais-de-9-mil-ofertas-de-emprego/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://bykle.kommune.no/ledige-stillingar-gammel.295004.nn.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://eidfjordkyrkje.no/Artikler/Nyheter/ArticleId/57899/Ledig-stilling-som-sokneprest-i-Eidfjord-og-Kinsarvik: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://danskebank.no/privat/artikler/2018/hvor-faar-du-pensjonen-din-fra: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://arendal.kommune.no/politikk-og-organisasjon/organisasjonen/helse-og-levekar/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dnb.no/privat/forsikring/tema-forsikring/langtidssyke-ufore.html
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://dnbfeed.no/privatokonomi/fradragene-du-bor-fa-med-deg-i-skattemeldingen/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://arendal.kommune.no/politikk-og-organisasjon/organisasjonen/helse-og-levekar/: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://deref-mail.com/mail/client/BX-tRBMJdVg/dereferrer/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://bodo.no/her-er-oversikten-over-sommerjobber-i-bodo-og-regionen/
+2018/11/17 23:06:05 Get http://127.0.0.1:3000/screenshot/http://dnb.no/privat/forsikring/tema-forsikring/langtidssyke-ufore.html: dial tcp 127.0.0.1:3000: connect: connection refused
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://cvnorway.no/
+2018/11/17 23:06:05 Kontakter: http://127.0.0.1:3000/screenshot/http://enkeltmannsforetak.nyttiginfo.no/pensjon-for-selvstendig-n%c3%a6ringsdrivende/
+panic: send on closed channel
+
+goroutine 72 [running]:
+main.main.func2(0xc000535e60, 0xc000535ec0)
+	/Users/tovare/Documents/analyse/apibrukere/apibrukere.go:200 +0x1ed
+created by main.main
+	/Users/tovare/Documents/analyse/apibrukere/apibrukere.go:215 +0xef9
+exit status 2

@@ -12,6 +12,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sync"
 
 	"github.com/schollz/progressbar"
 	"golang.org/x/oauth2"
@@ -191,20 +192,46 @@ func main() {
 		return page, nil
 	}
 
-	for k, v := range resultat {
-		defer bar.Add(1)
-		resultatstreng, err := botget(v.FullReferers[0].URL, true, true)
-		if err != nil {
-			t := resultat[k]
-			t.Failed = err
-			resultat[k] = t
-			continue
+	process := func(wg *sync.WaitGroup, c <-chan Referrer, out chan<- Referrer) {
+		for v := range c {
+			bar.Add(1)
+			resultatstreng, err := botget(v.FullReferers[0].URL, true, true)
+			if err != nil {
+				v.Failed = err
+				out <- v
+				continue
+			}
+			if strings.Contains(resultatstreng, "stillinger/widget") {
+				log.Println("Gjorde et funn!")
+				botget(v.FullReferers[0].URL, true, true)
+			}
+			out <- v
 		}
-		if strings.Contains(resultatstreng, "stillinger/widget") {
-			log.Println("Gjorde et funn!")
-			botget(v.FullReferers[0].URL, true, true)
+		wg.Done()
+	}
+
+	var bc = make(chan Referrer, 100000)
+	var br = make(chan Referrer, 100000)
+	var wg sync.WaitGroup
+	for i := 0; i < 8; i++ {
+		wg.Add(1)
+		go process(&wg, bc, br)
+	}
+	for _, v := range resultat {
+		bc <- v
+	}
+	close(bc)
+
+	consume := func() {
+		for v := range br {
+			resultat[v.Domain] = v
 		}
 	}
+	go consume()
+
+	wg.Wait()
+	close(br)
+
 	report(resultat)
 	//s, _ := json.MarshalIndent(resultat, "", "  ")
 	//log.Println(string(s))
