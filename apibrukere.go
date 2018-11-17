@@ -213,22 +213,22 @@ func main() {
 	var bc = make(chan Referrer, 100000)
 	var br = make(chan Referrer, 100000)
 	var wg sync.WaitGroup
+
 	for i := 0; i < 8; i++ {
 		wg.Add(1)
 		go process(&wg, bc, br)
 	}
-	for _, v := range resultat {
-		bc <- v
-	}
-	close(bc)
-
 	consume := func() {
 		for v := range br {
 			resultat[v.Domain] = v
 		}
 	}
 	go consume()
-
+	// Full køen meed arbeid.
+	for _, v := range resultat {
+		bc <- v
+	}
+	close(bc)
 	wg.Wait()
 	close(br)
 
