@@ -295,11 +295,26 @@ RAPPORT ETTER UNDERSØKELSE
   Antall med flere lenker til stillinger...............{{.FlereStillinger}}
   Antall deteksjoner av Widget.........................{{.AntallWidgets}}
 
-
-DETALJER
+BRUKTE WIDGET
 ==========================================================================
 
+{{range $k, $v := .Detaljer}}{{if $v.Widget}}* {{$v.Domain}} {{$v.Domain}}{{$v.UsedReferrer.Path}} {{- end}}{{end}}
 
+
+DET VAR FLERE LENKER TIL GAMMELT STILLINGSSØK
+==========================================================================
+
+{{range $k, $v := .Detaljer}}{{if $v.NStilinger}}
+* {{$v.Domain}}{{$v.UsedReferrer.Path}}
+{{- end}}{{end}}
+
+
+DOMENER SOM GA FEIL
+==========================================================================
+
+{{range $k, $v := .Detaljer}}{{if $v.Failed}}
+* {{$v.Domain}}{{$v.UsedReferrer.Path}}
+{{- end}}{{end}}
 `
 	templ, _ := template.New("Rapport").Parse(ttext)
 	templ.Execute(os.Stdout, t)
