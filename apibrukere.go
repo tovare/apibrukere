@@ -31,13 +31,14 @@ type FullReferrer struct {
 
 // Referrer ... Hvert domene
 type Referrer struct {
-	Domain       string
-	SumEntrances int
-	Failed       error
-	Widget       bool
-	NStilinger   bool
-	UsedReferrer url.URL
-	FullReferers []FullReferrer
+	Domain          string
+	SumEntrances    int
+	Failed          error
+	Widget          bool
+	NStilinger      bool
+	Stillingsnummer bool
+	UsedReferrer    url.URL
+	FullReferers    []FullReferrer
 }
 
 func main() {
@@ -217,12 +218,15 @@ func main() {
 			if strings.Contains(resultatstreng, "nav_stillinger") {
 				v.Widget = true
 				log.Println("Gjorde et funn!")
-				botget(v.FullReferers[0].URL, true, true)
+				botget(v.UsedReferrer, true, true)
 			}
 			if strings.Count(resultatstreng, "tjenester.nav.no/stillinger") > 1 {
 				v.NStilinger = true
 				log.Println("Stillinger nevnt mer enn en gang.")
-				botget(v.UsedReferrer, true, true)
+			}
+			if strings.Contains(strings.ToLower(resultatstreng), "Stillingsnummer") {
+				v.Stillingsnummer = true
+				log.Println("Stillinger nevnt mer enn en gang.")
 			}
 			out <- v
 		}
@@ -266,6 +270,7 @@ func report(resultat map[string]Referrer) {
 		AntallFeil      int
 		FlereStillinger int
 		AntallWidgets   int
+		Stillingsnummer int
 		Detaljer        map[string]Referrer
 	}
 
@@ -283,6 +288,9 @@ func report(resultat map[string]Referrer) {
 		if v.Widget {
 			t.AntallWidgets++
 		}
+		if v.Stillingsnummer {
+			t.Stillingsnummer++
+		}
 	}
 
 	ttext := `
@@ -293,6 +301,7 @@ RAPPORT ETTER UNDERSØKELSE
   Antall domener som er undersøkt......................{{.AntallDomener}}
   Antall domener som ga feilmelding....................{{.AntallFeil}}
   Antall med flere lenker til stillinger...............{{.FlereStillinger}}
+  Antall med stillingsnumm er..........................{{.Stillingsnummer}}
   Antall deteksjoner av Widget.........................{{.AntallWidgets}}
 
 BRUKTE WIDGET
@@ -306,6 +315,12 @@ DET VAR FLERE LENKER TIL GAMMELT STILLINGSSØK
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.NStilinger}}
+* {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
+
+DET VAR STILLINGSNUMMER I KILDEN
+==========================================================================
+
+{{range $k, $v := .Detaljer}}{{if $v.Stillingsnummer}}
 * {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 
