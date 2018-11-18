@@ -49,7 +49,7 @@ func main() {
 		rendertron       string
 	)
 	flag.StringVar(&credentials, "c", "private/tovare-a7a5db068b79.json", "Google API credentials")
-	flag.IntVar(&antallResultater, "n", 10, "Antall restulater å analysere, max 100 000")
+	flag.IntVar(&antallResultater, "n", 10, "Antall restulater å analysere, max 1000")
 	flag.BoolVar(&saveall, "s", false, "Lagrer tekst og bilde fra alle sider")
 	flag.StringVar(&rendertron, "r", "http://127.0.0.1:3000", "Adressen til Google rendertron")
 	flag.Parse()
@@ -74,6 +74,9 @@ func main() {
 	}
 
 	// Definer og kjør rapport
+	// XXX: Får sampling hvis jeg henter inn mer enn 2 dager.
+	//      trenger å hente flere rapporter og kjøre rate-limiting
+	//		for å redusere hit-rate mot google API.
 	var myreport *ga.GetReportsResponse
 
 	{

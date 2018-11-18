@@ -19,6 +19,10 @@ Prosjektet bruker rendertron som startes med:
 
 Nb: puppeteer må installeres seperat. Config til typescript lint måtte endres til å bli mindre aggressiv.
 
+    Nyttig: ps aux | grep Chrome | awk ' { print $2 } ' | xargs kill -9
+
+
+
 ## Rapportering
 
 1. Antall nettsteder som er undersøkt.
