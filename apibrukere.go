@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"flag"
-	"html/template"
 	"io"
 	"io/ioutil"
 	"log"
@@ -14,6 +14,7 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"text/template"
 
 	"github.com/schollz/progressbar"
 	"golang.org/x/oauth2"
@@ -35,6 +36,7 @@ type Referrer struct {
 	Failed       error
 	Widget       bool
 	NStilinger   bool
+	UsedReferrer url.URL
 	FullReferers []FullReferrer
 }
 
@@ -80,7 +82,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-10-01", EndDate: "2018-10-30"},
+						{StartDate: "2018-09-01", EndDate: "2018-09-30"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -101,7 +103,8 @@ func main() {
 	}
 
 	// Lag en liste over alle henvisninger i resultat
-	resultat := make(map[string]Referrer)
+	inputdata := make(map[string]Referrer)
+	output := make(map[string]Referrer)
 	const (
 		ENTRANCES = iota
 		UNIQUEPAGEVIEWS
@@ -114,7 +117,7 @@ func main() {
 		if domain == "(direct)" {
 			continue
 		}
-		tmp, exists := resultat[domain]
+		tmp, exists := inputdata[domain]
 		if !exists {
 			tmp := Referrer{}
 			tmp.FullReferers = make([]FullReferrer, 1)
@@ -135,14 +138,13 @@ func main() {
 			entrances += ref.Entrances
 		}
 		tmp.SumEntrances = entrances
-		resultat[domain] = tmp
+		// Noen sider har mange forskjellige lenker, vi undersøker den første.
+		tmp.UsedReferrer = tmp.FullReferers[0].URL
+		inputdata[domain] = tmp
 
 	}
 
-	bar := progressbar.New(len(resultat))
-
-	// Crawl alle sider. Noen sider har mange forskjellige lenker.
-	// Dette løses ved å plukke den første lenken.
+	bar := progressbar.New(len(inputdata))
 
 	client := &http.Client{}
 	botget := func(u url.URL, screenshot bool, save bool) (string, error) {
@@ -206,7 +208,7 @@ func main() {
 	process := func(wg *sync.WaitGroup, c <-chan Referrer, out chan<- Referrer) {
 		for v := range c {
 			bar.Add(1)
-			resultatstreng, err := botget(v.FullReferers[0].URL, false, true)
+			resultatstreng, err := botget(v.UsedReferrer, false, true)
 			if err != nil {
 				v.Failed = err
 				out <- v
@@ -220,7 +222,7 @@ func main() {
 			if strings.Count(resultatstreng, "tjenester.nav.no/stillinger") > 1 {
 				v.NStilinger = true
 				log.Println("Stillinger nevnt mer enn en gang.")
-				botget(v.FullReferers[0].URL, true, true)
+				botget(v.UsedReferrer, true, true)
 			}
 			out <- v
 		}
@@ -238,7 +240,7 @@ func main() {
 	}
 	consume := func() {
 		for v := range br {
-			resultat[v.Domain] = v
+			output[v.Domain] = v
 		}
 		cg.Done()
 	}
@@ -246,14 +248,14 @@ func main() {
 	go consume()
 
 	// Fyll køen meed arbeid.
-	for _, v := range resultat {
+	for _, v := range inputdata {
 		bc <- v
 	}
 	close(bc)
 	wg.Wait()
 	close(br)
 	cg.Wait()
-	report(resultat)
+	report(output)
 
 }
 
@@ -293,12 +295,16 @@ RAPPORT ETTER UNDERSØKELSE
   Antall med flere lenker til stillinger...............{{.FlereStillinger}}
   Antall deteksjoner av Widget.........................{{.AntallWidgets}}
 
+
+DETALJER
+==========================================================================
+
+
 `
 	templ, _ := template.New("Rapport").Parse(ttext)
 	templ.Execute(os.Stdout, t)
 
-	//fmt.Println("------------------------------")
-	//s, _ := json.MarshalIndent(resultat, "", "  ")
-	//fmt.Println(string(s))
+	s, _ := json.MarshalIndent(resultat, "", "  ")
+	log.Println(string(s))
 
 }
