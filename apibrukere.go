@@ -291,7 +291,7 @@ RAPPORT ETTER UNDERSØKELSE
 ==========================================================================
 
   Antall domener som er undersøkt......................{{.AntallDomener}}
-  Antall domener som ga veilmelding....................{{.AntallFeil}}
+  Antall domener som ga feilmelding....................{{.AntallFeil}}
   Antall med flere lenker til stillinger...............{{.FlereStillinger}}
   Antall deteksjoner av Widget.........................{{.AntallWidgets}}
 
