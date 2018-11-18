@@ -82,7 +82,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-10-01", EndDate: "2018-10-30"},
+						{StartDate: "2018-11-01", EndDate: "2018-11-15"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -315,8 +315,14 @@ DOMENER SOM GA FEIL
 {{range $k, $v := .Detaljer}}{{if $v.Failed}}
 * {{$v.Domain}}{{$v.UsedReferrer.Path}}{{- end}}{{end}}
 `
+	file, err := os.Create("report.md")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
 	templ, _ := template.New("Rapport").Parse(ttext)
-	templ.Execute(os.Stdout, t)
+	templ.Execute(file, t)
 
 	s, _ := json.MarshalIndent(resultat, "", "  ")
 	log.Println(string(s))
