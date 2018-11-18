@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"errors"
 	"flag"
+	"html/template"
 	"io"
 	"io/ioutil"
 	"log"
@@ -129,13 +129,20 @@ func main() {
 		entry.Entrances, _ = strconv.Atoi(row.Metrics[0].Values[ENTRANCES])
 		entry.UniquePageviews, _ = strconv.Atoi(row.Metrics[0].Values[UNIQUEPAGEVIEWS])
 		tmp.FullReferers = append(tmp.FullReferers, entry)
+		entrances := 0
+
+		for _, ref := range tmp.FullReferers {
+			entrances += ref.Entrances
+		}
+		tmp.SumEntrances = entrances
 		resultat[domain] = tmp
+
 	}
 
 	bar := progressbar.New(len(resultat))
 
 	// Crawl alle sider. Noen sider har mange forskjellige lenker.
-	// Dette løses ved å plukke en tilfeldig lenke.
+	// Dette løses ved å plukke den første lenken.
 
 	client := &http.Client{}
 	botget := func(u url.URL, screenshot bool, save bool) (string, error) {
@@ -210,7 +217,7 @@ func main() {
 				log.Println("Gjorde et funn!")
 				botget(v.FullReferers[0].URL, true, true)
 			}
-			if strings.Count(resultatstreng, "stillinger") > 1 {
+			if strings.Count(resultatstreng, "tjenester.nav.no/stillinger") > 1 {
 				v.NStilinger = true
 				log.Println("Stillinger nevnt mer enn en gang.")
 				botget(v.FullReferers[0].URL, true, true)
@@ -220,9 +227,10 @@ func main() {
 		wg.Done()
 	}
 
-	var bc = make(chan Referrer, 100000)
-	var br = make(chan Referrer, 100000)
+	var bc = make(chan Referrer, 80)
+	var br = make(chan Referrer, 10)
 	var wg sync.WaitGroup
+	var cg sync.WaitGroup
 
 	for i := 0; i < 8; i++ {
 		wg.Add(1)
@@ -232,22 +240,65 @@ func main() {
 		for v := range br {
 			resultat[v.Domain] = v
 		}
+		cg.Done()
 	}
+	cg.Add(1)
 	go consume()
-	// Full køen meed arbeid.
+
+	// Fyll køen meed arbeid.
 	for _, v := range resultat {
 		bc <- v
 	}
 	close(bc)
 	wg.Wait()
 	close(br)
-
+	cg.Wait()
 	report(resultat)
-	s, _ := json.MarshalIndent(resultat, "", "  ")
-	log.Println(string(s))
 
 }
 
 func report(resultat map[string]Referrer) {
+
+	type Sum struct {
+		AntallDomener   int
+		AntallFeil      int
+		FlereStillinger int
+		AntallWidgets   int
+		Detaljer        map[string]Referrer
+	}
+
+	t := Sum{}
+	t.AntallDomener = len(resultat)
+	t.Detaljer = resultat
+
+	for _, v := range resultat {
+		if v.Failed != nil {
+			t.AntallFeil++
+		}
+		if v.NStilinger {
+			t.FlereStillinger++
+		}
+		if v.Widget {
+			t.AntallWidgets++
+		}
+	}
+
+	ttext := `
+
+RAPPORT ETTER UNDERSØKELSE
+==========================================================================
+
+  Antall domener som er undersøkt......................{{.AntallDomener}}
+  Antall domener som ga veilmelding....................{{.AntallFeil}}
+  Antall med flere lenker til stillinger...............{{.FlereStillinger}}
+  Antall deteksjoner av Widget.........................{{.AntallWidgets}}
+
+`
+	templ, _ := template.New("Rapport").Parse(ttext)
+	templ.Execute(os.Stdout, t)
+
+	//fmt.Println("------------------------------")
+	//s, _ := json.MarshalIndent(resultat, "", "  ")
+	//fmt.Println(string(s))
 
 }
