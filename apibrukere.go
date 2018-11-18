@@ -211,9 +211,17 @@ func main() {
 			bar.Add(1)
 			resultatstreng, err := botget(v.UsedReferrer, false, true)
 			if err != nil {
-				v.Failed = err
-				out <- v
-				continue
+				// Fallback til vanlig HTTP uten rendering.
+				resp, err := http.Get(v.UsedReferrer.String())
+				if err != nil {
+					v.Failed = err
+					out <- v
+					continue
+				}
+				defer resp.Body.Close()
+				b, err := ioutil.ReadAll(resp.Body)
+				resultatstreng = string(b)
+
 			}
 			if strings.Contains(resultatstreng, "nav_stillinger") {
 				v.Widget = true
