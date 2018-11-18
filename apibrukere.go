@@ -83,7 +83,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-11-01", EndDate: "2018-11-15"},
+						{StartDate: "2018-07-01", EndDate: "2018-11-15"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -316,20 +316,20 @@ BRUKTE WIDGET
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.Widget}}
-* {{$v.Domain}} {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
+* http://{{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 
 DET VAR FLERE LENKER TIL GAMMELT STILLINGSSØK
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.NStilinger}}
-* {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
+* http://{{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 DET VAR STILLINGSNUMMER I KILDEN
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.Stillingsnummer}}
-* {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
+* http://{{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 
 DOMENER SOM GA FEIL
