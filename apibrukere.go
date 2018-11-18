@@ -214,7 +214,7 @@ func main() {
 				out <- v
 				continue
 			}
-			if strings.Contains(resultatstreng, "stillinger/widget") {
+			if strings.Contains(resultatstreng, "nav_stillinger") {
 				v.Widget = true
 				log.Println("Gjorde et funn!")
 				botget(v.FullReferers[0].URL, true, true)

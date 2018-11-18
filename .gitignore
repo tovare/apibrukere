@@ -1,4 +1,5 @@
 
+report*
 *.json
 private/
 out/
