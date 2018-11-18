@@ -82,7 +82,7 @@ func main() {
 					ViewId: "95725034",
 
 					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-09-01", EndDate: "2018-09-30"},
+						{StartDate: "2018-10-01", EndDate: "2018-10-30"},
 					},
 					Metrics: []*ga.Metric{
 						{Expression: "ga:entrances"},
@@ -234,7 +234,7 @@ func main() {
 	var wg sync.WaitGroup
 	var cg sync.WaitGroup
 
-	for i := 0; i < 8; i++ {
+	for i := 0; i < 4; i++ {
 		wg.Add(1)
 		go process(&wg, bc, br)
 	}
@@ -298,23 +298,22 @@ RAPPORT ETTER UNDERSØKELSE
 BRUKTE WIDGET
 ==========================================================================
 
-{{range $k, $v := .Detaljer}}{{if $v.Widget}}* {{$v.Domain}} {{$v.Domain}}{{$v.UsedReferrer.Path}} {{- end}}{{end}}
+{{range $k, $v := .Detaljer}}{{if $v.Widget}}
+* {{$v.Domain}} {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 
 DET VAR FLERE LENKER TIL GAMMELT STILLINGSSØK
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.NStilinger}}
-* {{$v.Domain}}{{$v.UsedReferrer.Path}}
-{{- end}}{{end}}
+* {{$v.Domain}}{{$v.UsedReferrer.Path}}  ({{$v.SumEntrances}}) {{- end}}{{end}}
 
 
 DOMENER SOM GA FEIL
 ==========================================================================
 
 {{range $k, $v := .Detaljer}}{{if $v.Failed}}
-* {{$v.Domain}}{{$v.UsedReferrer.Path}}
-{{- end}}{{end}}
+* {{$v.Domain}}{{$v.UsedReferrer.Path}}{{- end}}{{end}}
 `
 	templ, _ := template.New("Rapport").Parse(ttext)
 	templ.Execute(os.Stdout, t)
