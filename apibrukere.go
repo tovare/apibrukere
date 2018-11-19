@@ -15,10 +15,12 @@ import (
 	"strings"
 	"sync"
 	"text/template"
+	"time"
 
 	"github.com/schollz/progressbar"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
+	"golang.org/x/time/rate"
 	ga "google.golang.org/api/analyticsreporting/v4"
 )
 
@@ -73,48 +75,68 @@ func main() {
 		}
 	}
 
+	inputdata := make(map[string]Referrer)
+
 	// Definer og kjør rapport
-	// XXX: Får sampling hvis jeg henter inn mer enn 2 dager.
-	//      trenger å hente flere rapporter og kjøre rate-limiting
-	//		for å redusere hit-rate mot google API.
-	var myreport *ga.GetReportsResponse
+	req := &ga.GetReportsRequest{
+		ReportRequests: []*ga.ReportRequest{
+			{
+				ViewId: "95725034",
 
-	{
-		req := &ga.GetReportsRequest{
-			ReportRequests: []*ga.ReportRequest{
-				{
-					ViewId: "95725034",
-
-					DateRanges: []*ga.DateRange{
-						{StartDate: "2018-07-01", EndDate: "2018-11-15"},
-					},
-					Metrics: []*ga.Metric{
-						{Expression: "ga:entrances"},
-						{Expression: "ga:uniquePageviews"},
-					},
-					Dimensions: []*ga.Dimension{
-						{Name: "ga:fullReferrer"},
-					},
-					PageSize: int64(antallResultater),
+				DateRanges: []*ga.DateRange{
+					{StartDate: "2018-07-01", EndDate: "2018-11-15"},
 				},
+				Metrics: []*ga.Metric{
+					{Expression: "ga:entrances"},
+					{Expression: "ga:uniquePageviews"},
+				},
+				Dimensions: []*ga.Dimension{
+					{Name: "ga:fullReferrer"},
+				},
+				PageSize: int64(antallResultater),
 			},
-		}
-		var err error
-		myreport, err = service.Reports.BatchGet(req).Do()
+		},
+	}
+
+	// collateReports ... For å unngå sampling i rapportene kjøres flere rapporter som settes sammen til en rapport.
+	collateReports := func(req *ga.GetReportsRequest) []*ga.ReportRow {
+
+		from := "2018-06-01"
+		days := 30
+
+		limit := rate.NewLimiter(1, 1) // GA kvoten er max 10 pr. sekunder, kjører 1 pr sekund.
+		ctx := context.Background()
+		start, err := time.Parse("2006-01-02", from)
+		end := start.AddDate(0, 0, days)
 		if err != nil {
 			log.Fatal(err)
 		}
+		rep := make([]*ga.ReportRow, 0)
+
+		for d := start; d.Before(end); d = d.AddDate(0, 0, 1) {
+			log.Println(d)
+			limit.Wait(ctx)
+			req.ReportRequests[0].DateRanges[0].StartDate = d.Format("2006-01-02")
+			req.ReportRequests[0].DateRanges[0].EndDate = d.AddDate(0, 0, 1).Format("2006-01-02")
+			myreport, err := service.Reports.BatchGet(req).Do()
+			rep = append(rep, myreport.Reports[0].Data.Rows...)
+
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+		return rep
 	}
 
 	// Lag en liste over alle henvisninger i resultat
-	inputdata := make(map[string]Referrer)
+
 	output := make(map[string]Referrer)
 	const (
 		ENTRANCES = iota
 		UNIQUEPAGEVIEWS
 	)
 
-	for _, row := range myreport.Reports[0].Data.Rows {
+	for _, row := range collateReports(req) {
 		// Eksepler: 69nord.no/ledige-stillinger , (direct)
 		partialurl := row.Dimensions[0]
 		domain := strings.Split(partialurl, "/")[0]
