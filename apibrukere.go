@@ -102,9 +102,9 @@ func main() {
 	collateReports := func(req *ga.GetReportsRequest) []*ga.ReportRow {
 
 		from := "2018-06-01"
-		days := 30
+		days := 160
 
-		limit := rate.NewLimiter(1, 1) // GA kvoten er max 10 pr. sekunder, kjører 1 pr sekund.
+		limit := rate.NewLimiter(0.2, 1) // GA kvoten er max 10 pr. sekunder, kjører 5 pr sekund.
 		ctx := context.Background()
 		start, err := time.Parse("2006-01-02", from)
 		end := start.AddDate(0, 0, days)
@@ -151,7 +151,8 @@ func main() {
 		entry := FullReferrer{}
 		u, err := url.ParseRequestURI("http://" + partialurl)
 		if err != nil {
-			log.Fatal(err)
+			log.Println(err)
+			continue
 		}
 		tmp.Domain = u.Host
 		entry.URL = *u
