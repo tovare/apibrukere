@@ -5,6 +5,7 @@ private/
 out/
 .DS_Store
 log.txt
+log*txt
 
 # Binaries for programs and plugins
 *.exe
